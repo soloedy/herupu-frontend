@@ -12,19 +12,25 @@
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
                             <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+                                <label for="email" class="text-info">Correo:</label><br>
+                                <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required />
+			                    <span *ngIf="!email.valid && email.touched">
+				                    El email es obligatorio
+			                </span>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required />
+                                <span *ngIf="!password.valid && password.touched">
+                                    La contraseña es obligatoria
+                                </span>
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
                             </div>
                             <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Register here</a>
+                                <a href="#" class="text-info" [routerLink]="['/register']" [routerLinkActive]="['active']">Register here</a>
                             </div>
                         </form>
                     </div>
