@@ -1,3 +1,3 @@
 export var GLOBAL = {
-    url: 'https://edutec-node-test.herokuapp.com/api/'
+    url: 'https://herupu.herokuapp.com/api/'
 }

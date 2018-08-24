@@ -10,7 +10,7 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
+                        <form id="login-form" class="form" action="" method="post" #loginForm="ngForm" (ngSubmit)="onSubmit()">
                             <div class="form-group">
                                 <label for="email" class="text-info">Correo:</label><br>
                                 <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required />
