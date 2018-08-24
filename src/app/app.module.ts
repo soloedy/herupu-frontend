@@ -10,12 +10,14 @@ import { Ng2Webstorage } from 'ngx-webstorage';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
