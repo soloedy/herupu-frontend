@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   constructor(
     private userService: UserService,
   ) {
-    this.user = new User('', '', '', '', '', '');
+    this.user = new User('', '', '', '', '', '','');
    }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
           if (response.user && response.user._id) {
             this.status = 'success';
 
-            this.user = new User('', '', '', '', '', '');
+            this.user = new User('', '', '', '', '', '','');
             registerForm.reset();
           } else {
             this.status = 'error';

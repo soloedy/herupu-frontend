@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     private storage: LocalStorageService,
     private sessionStorage: SessionStorageService,
   ) { 
-    this.user = new User('', '', '', '', '', '');
+    this.user = new User('', '', '', '', '', '','');
   }
 
   ngOnInit() {

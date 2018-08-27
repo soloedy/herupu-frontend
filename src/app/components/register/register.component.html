@@ -24,7 +24,7 @@
                 <label for="name" class="text-info">Nombres:</label>
                 <br>
                 <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required />
-                <span *ngIf="!email.valid && email.touched">
+                <span *ngIf="!name.valid && name.touched">
                   El nombre es obligatorio.
                 </span>
               </p>
@@ -32,10 +32,18 @@
                 <label for="lastname" class="text-info">Apellidos:</label>
                 <br>
                 <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="user.lastname" class="form-control" required />
-                <span *ngIf="!email.valid && email.touched">
+                <span *ngIf="!lastname.valid && lastname.touched">
                   El apellido es obligatorio.
                 </span>
               </p>
+              <p>
+                  <label for="cellphone" class="text-info">Teléfono:</label>
+                  <br>
+                  <input type="text" name="cellphone" #lastname="ngModel" [(ngModel)]="user.cellphone" class="form-control" required />
+                  <span *ngIf="!cellphone.valid && cellphone.touched">
+                    El telefono es obligatorio.
+                  </span>
+                </p>
               <p>
                 <label for="email" class="text-info">Correo:</label>
                 <br>
