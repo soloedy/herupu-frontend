@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { RegisterOptionsComponent } from './components/register-options/register-options.component';
+import { RegisterCollaboratorComponent } from './components/register-collaborator/register-collaborator.component';
 
 // Componentes
 
@@ -19,8 +21,17 @@ const appRoutes: Routes = [
 		component: LoginComponent
 	},
 	{
+		path: 'register-option',
+		component: RegisterOptionsComponent
+
+	},
+	{
 		path: 'register',
 		component: RegisterComponent
+	},
+	{
+		path: 'register-collaborator',
+		component: RegisterCollaboratorComponent
 	},
 	{
 		path: 'homepage',
