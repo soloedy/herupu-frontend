@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { RegisterOptionsComponent } from './components/register-options/register-options.component';
 import { RegisterCollaboratorComponent } from './components/register-collaborator/register-collaborator.component';
+import { LoginOptionsComponent } from './components/login-options/login-options.component';
+import { LoginCollaboratorComponent } from './components/login-collaborator/login-collaborator.component';
 
 // Componentes
 
@@ -17,13 +18,16 @@ const appRoutes: Routes = [
 		pathMatch: 'full'
 	},
 	{
-		path: 'login',
-		component: LoginComponent
+		path: 'login-option',
+		component: LoginOptionsComponent
 	},
 	{
-		path: 'register-option',
-		component: RegisterOptionsComponent
-
+		path: 'login-collaborator',
+		component: LoginCollaboratorComponent
+	},
+	{
+		path: 'login',
+		component: LoginComponent
 	},
 	{
 		path: 'register',

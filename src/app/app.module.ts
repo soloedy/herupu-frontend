@@ -12,16 +12,18 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { RegisterCollaboratorComponent } from './components/register-collaborator/register-collaborator.component';
-import { RegisterOptionsComponent } from './components/register-options/register-options.component';
+import { LoginOptionsComponent } from './components/login-options/login-options.component';
+import { LoginCollaboratorComponent } from './components/login-collaborator/login-collaborator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginOptionsComponent,
+    LoginCollaboratorComponent,
     LoginComponent,
     RegisterComponent,
     HomepageComponent,
-    RegisterCollaboratorComponent,
-    RegisterOptionsComponent
+    RegisterCollaboratorComponent
   ],
   imports: [
     BrowserModule,
