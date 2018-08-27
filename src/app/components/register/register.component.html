@@ -40,9 +40,6 @@
                   <label for="cellphone" class="text-info">Teléfono:</label>
                   <br>
                   <input type="text" name="cellphone" #lastname="ngModel" [(ngModel)]="user.cellphone" class="form-control" required />
-                  <span *ngIf="!cellphone.valid && cellphone.touched">
-                    El telefono es obligatorio.
-                  </span>
                 </p>
               <p>
                 <label for="email" class="text-info">Correo:</label>
