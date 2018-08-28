@@ -7,7 +7,10 @@ import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 @Component({
   selector: 'app-login-collaborator',
   templateUrl: './login-collaborator.component.html',
-  styleUrls: ['./login-collaborator.component.css']
+  styleUrls: ['./login-collaborator.component.css'],
+  providers: [
+    UserCollaboratorService
+  ]
 })
 export class LoginCollaboratorComponent implements OnInit {
   public user: UserCollaborator;

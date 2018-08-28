@@ -1,3 +1,87 @@
-<p>
-  register-collaborator works!
-</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+  <div id="login">
+    <h1 class="text-center text-white pt-5">Registrate como colaborador de Herupu</h1>
+    <div class="alert alert-success" *ngIf="status == 'success'">
+      Registro completado correctamente,
+      <a [routerLink]="['/login']">identificate aquí</a>.
+    </div>
+
+    <div class="alert alert-danger" *ngIf="status == 'error'">
+      No te has registrado correctamente
+    </div>
+    <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+          <div id="login-box" class="col-md-12">
+            <form class="form" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+              <p></p>
+              <p>
+                <label for="name" class="text-info">Nombres:</label>
+                <br>
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required />
+                <span *ngIf="!name.valid && name.touched">
+                  El nombre es obligatorio.
+                </span>
+              </p>
+              <p>
+                <label for="lastname" class="text-info">Apellidos:</label>
+                <br>
+                <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="user.lastname" class="form-control" required />
+                <span *ngIf="!lastname.valid && lastname.touched">
+                  El apellido es obligatorio.
+                </span>
+              </p>
+              <p>
+                <label for="phone" class="text-info">Teléfono:</label>
+                <br>
+                <input type="text" name="phone" #phone="ngModel" [(ngModel)]="user.phone" class="form-control" required />
+                <span *ngIf="!phone.valid && phone.touched">
+                  El teléfono es obligatorio. 
+                </span>
+             </p>
+              <p>
+                  <label for="ocupation" class="text-info">Ocupación:</label>
+                  <br>
+                  <input type="text" name="ocupation" #ocupation="ngModel" [(ngModel)]="user.ocupation" class="form-control" required />
+                  <span *ngIf="!ocupation.valid && ocupation.touched">
+                    La ocupación es obligatoria. 
+                  </span>
+              </p>
+              <p>
+                <label for="experience" class="text-info">Años de Experiencia:</label>
+                <br>
+                <input type="text" name="experience" #experience="ngModel" [(ngModel)]="user.experience" class="form-control" required />
+                <span *ngIf="!experience.valid && experience.touched">
+                  Tu experiencia es obligatoria. 
+                </span>
+            </p>
+              <p>
+                <label for="email" class="text-info">Correo:</label>
+                <br>
+                <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required />
+                <span *ngIf="!email.valid && email.touched">
+                  El email es obligatorio.
+                </span>
+              </p>
+              <p>
+                <label for="password" class="text-info">Password:</label>
+                <br>
+                <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required />
+                <span *ngIf="!password.valid && password.touched">
+                  La contraseña es obligatoria
+                </span>
+              </p>
+              <input type="submit" value="Registro" class="btn btn-outline-primary" [disabled]="!registerForm.form.valid" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

@@ -1,6 +1,6 @@
 export class UserCollaborator {
     constructor(
-        name: String,
+    name: String,
     lastname: String,
     email: String,
     ocupation: String,
