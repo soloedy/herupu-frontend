@@ -5,16 +5,16 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class UserCollaboratorService {
+export class CollaboratorService {
     public url: string;
 
     constructor(private _http: Http) {
         this.url = GLOBAL.url;
     }
 
-    login(user) {
-        user.gettoken = true;
-        let params = JSON.stringify(user);
+    login(Collaborator) {
+        Collaborator.gettoken = true;
+        let params = JSON.stringify(Collaborator);
         let headers = new Headers({
             'Content-Type': 'application/json'
         });
@@ -30,8 +30,8 @@ export class UserCollaboratorService {
         );
     }
 
-    register(user) {
-        let params = JSON.stringify(user);
+    register(Collaborator) {
+        let params = JSON.stringify(Collaborator);
         console.log(params);
         let headers = new Headers({
             'Content-Type': 'application/json'

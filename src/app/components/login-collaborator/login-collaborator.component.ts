@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserCollaborator } from '../../models/user-collaborator';
-import { UserCollaboratorService } from '../../services/user-collaborator.service';
+import { Collaborator } from '../../models/collaborator';
+import { CollaboratorService } from '../../services/collaborator.service';
 import { Router } from '@angular/router';
 import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
@@ -9,19 +9,19 @@ import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
   templateUrl: './login-collaborator.component.html',
   styleUrls: ['./login-collaborator.component.css'],
   providers: [
-    UserCollaboratorService
+    CollaboratorService
   ]
 })
 export class LoginCollaboratorComponent implements OnInit {
-  public user: UserCollaborator;
+  public user: Collaborator;
 
   constructor(
-    private _userService: UserCollaboratorService,
+    private _userService: CollaboratorService,
     private router: Router,
     private storage: LocalStorageService,
     private sessionStorage: SessionStorageService,
   ) { 
-    this.user = new UserCollaborator('', '', '', '', '', '','','','');
+    this.user = new Collaborator('', '', '', '', '', '','','','','');
   }
 
   ngOnInit() {
