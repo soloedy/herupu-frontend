@@ -39,7 +39,7 @@ const appRoutes: Routes = [
 		component: CollaboratorComponent
 	},
 	{
-		path: 'homepage',
+		path: 'collaborators-homepage',
 		component: HomepageComponent
 	},
 	{
