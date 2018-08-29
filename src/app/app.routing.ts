@@ -15,7 +15,7 @@ const appRoutes: Routes = [
 	//{path: '', component: HomeComponent},
 	{
 		path: '',
-		redirectTo: 'home',
+		redirectTo: 'login-option',
 		pathMatch: 'full'
 	},
 	{
