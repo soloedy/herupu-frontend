@@ -13,22 +13,22 @@ import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
   ]
 })
 export class LoginCollaboratorComponent implements OnInit {
-  public user: Collaborator;
+  public collaborator: Collaborator;
 
   constructor(
-    private _userService: CollaboratorService,
+    private _collaboratorService: CollaboratorService,
     private router: Router,
     private storage: LocalStorageService,
     private sessionStorage: SessionStorageService,
   ) { 
-    this.user = new Collaborator('', '', '', '', '', '','','','','');
+    this.collaborator = new Collaborator('', '', '', '', '', '','','','','');
   }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this._userService.loginColab(this.user)
+    this._collaboratorService.loginColab(this.collaborator)
       .subscribe(
         response => {
           const token = response['token'];
