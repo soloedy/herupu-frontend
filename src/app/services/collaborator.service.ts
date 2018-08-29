@@ -64,6 +64,16 @@ export class CollaboratorService {
         );
     }
     
-
-
+    getCollaborator(id){
+        const token = this.storage.retrieve('token');
+        const headers = new Headers({
+            'Authorization': token
+        });
+        return this._http.get(
+            `${this.url}collaborator-profile/${id}`,
+            { headers: headers }
+        ).map(
+            res => res.json()
+        );
+    }
 }

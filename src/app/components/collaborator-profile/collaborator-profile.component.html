@@ -1,1 +1,13 @@
-
+<div class="collaborator-box col-lg-11" *ngIf="animal">
+        <div id="collaborator-head-card" class="col-lg-4 pull-left">
+          <img src="{{url + 'get-image-collaborator/' +collaborator.image}}" style="width:300px"/>
+        </div>
+        <div class="collaborator-data col-lg-7 pull-left">
+          <h1>{{collaborator.name}} {{collaborator.lastname}}</h1>
+          <p>{{collaborator.ocupation}}</p>
+          <p>{{collaborator.experience}}</p>
+          <p>{{collaborator.phone}}</p>
+          <p>{{collaborator.email}}</p>
+          <button class="btn btn-danger" (click)="deleteAnimal()">Eliminar</button>     
+        </div>
+    </div>
