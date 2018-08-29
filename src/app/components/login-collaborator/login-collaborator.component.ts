@@ -34,7 +34,7 @@ export class LoginCollaboratorComponent implements OnInit {
           const token = response['token'];
           this.storage.store('token', token);
           this.sessionStorage.store('tokenSession', token);
-          this.router.navigate(['/collaborator-profile']);
+          this.router.navigate(['/collaborator-profile',this.collaborator._id]);
         },
         error => {
           console.log(error);

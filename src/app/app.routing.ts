@@ -43,7 +43,7 @@ const appRoutes: Routes = [
 		component: HomepageComponent
 	},
 	{
-		path: 'collaborator-profile',
+		path: 'collaborator-profile/:id',
 		component: CollaboratorProfileComponent
 	}
 ];
