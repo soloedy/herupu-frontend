@@ -12,9 +12,9 @@ export class CollaboratorService {
         this.url = GLOBAL.url;
     }
 
-    login(Collaborator) {
-        Collaborator.gettoken = true;
-        let params = JSON.stringify(Collaborator);
+    login(collaborator) {
+        collaborator.gettoken = true;
+        let params = JSON.stringify(collaborator);
         let headers = new Headers({
             'Content-Type': 'application/json'
         });
@@ -30,8 +30,8 @@ export class CollaboratorService {
         );
     }
 
-    register(Collaborator) {
-        let params = JSON.stringify(Collaborator);
+    register(collaborator) {
+        let params = JSON.stringify(collaborator);
         console.log(params);
         let headers = new Headers({
             'Content-Type': 'application/json'

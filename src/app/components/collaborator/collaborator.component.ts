@@ -28,7 +28,7 @@ export class CollaboratorComponent implements OnInit {
     this.collaboratorService.register(this.collaborator)
       .subscribe(
         response => {
-          if (response.collaborator && response.collaborator._id) {
+          if (response.Collaborator && response.Collaborator._id) {
             this.status = 'success';
 
             this.collaborator = new Collaborator('','','','','','','','','','');
