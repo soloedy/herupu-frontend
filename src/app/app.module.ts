@@ -14,6 +14,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { LoginOptionsComponent } from './components/login-options/login-options.component';
 import { LoginCollaboratorComponent } from './components/login-collaborator/login-collaborator.component';
 import { CollaboratorComponent } from './components/collaborator/collaborator.component';
+import { CollaboratorProfileComponent } from './components/collaborator-profile/collaborator-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CollaboratorComponent } from './components/collaborator/collaborator.co
     LoginComponent,
     RegisterComponent,
     HomepageComponent,
-    CollaboratorComponent
+    CollaboratorComponent,
+    CollaboratorProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class CollaboratorService {
         this.url = GLOBAL.url;
     }
 
-    login(collaborator) {
+    loginColab(collaborator) {
         collaborator.gettoken = true;
         let params = JSON.stringify(collaborator);
         let headers = new Headers({
@@ -20,7 +20,7 @@ export class CollaboratorService {
         });
 
         return this._http.post(
-            this.url + 'login',
+            this.url + 'login-collaborator',
             params,
             {
                 headers: headers
@@ -38,7 +38,7 @@ export class CollaboratorService {
         });
 
         return this._http.post(
-            this.url + 'register',
+            this.url + 'register-collaborator',
             params,
             {
                 headers: headers

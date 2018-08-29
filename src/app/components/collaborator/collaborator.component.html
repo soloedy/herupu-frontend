@@ -4,20 +4,20 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <body>
-  <div id="login">
+  <div id="collaborator">
     <h1 class="text-center text-white pt-5">Registrate como colaborador de Herupu</h1>
     <div class="alert alert-success" *ngIf="status == 'success'">
       Registro completado correctamente,
-      <a [routerLink]="['/login']">identificate aquí</a>.
+      <a [routerLink]="['/login-collaborator']">identificate aquí</a>.
     </div>
 
     <div class="alert alert-danger" *ngIf="status == 'error'">
       No te has registrado correctamente
     </div>
     <div class="container">
-      <div id="login-row" class="row justify-content-center align-items-center">
-        <div id="login-column" class="col-md-6">
-          <div id="login-box" class="col-md-12">
+      <div id="collaborator-row" class="row justify-content-center align-items-center">
+        <div id="collaborator-column" class="col-md-6">
+          <div id="collaborator-box" class="col-md-12">
             <form class="form" #registerColForm="ngForm" (ngSubmit)="onSubmit(registerColForm)">
               <p></p>
               <p>

@@ -28,7 +28,7 @@ export class LoginCollaboratorComponent implements OnInit {
   }
 
   onSubmit() {
-    this._userService.login(this.user)
+    this._userService.loginColab(this.user)
       .subscribe(
         response => {
           const token = response['token'];

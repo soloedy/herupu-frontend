@@ -6,6 +6,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { LoginOptionsComponent } from './components/login-options/login-options.component';
 import { LoginCollaboratorComponent } from './components/login-collaborator/login-collaborator.component';
 import { CollaboratorComponent } from './components/collaborator/collaborator.component';
+import { CollaboratorProfileComponent } from './components/collaborator-profile/collaborator-profile.component';
 
 // Componentes
 
@@ -40,6 +41,10 @@ const appRoutes: Routes = [
 	{
 		path: 'homepage',
 		component: HomepageComponent
+	},
+	{
+		path: 'collaborator-profile',
+		component: CollaboratorProfileComponent
 	}
 ];
 
