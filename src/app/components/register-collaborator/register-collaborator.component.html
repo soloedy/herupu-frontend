@@ -18,7 +18,7 @@
       <div id="login-row" class="row justify-content-center align-items-center">
         <div id="login-column" class="col-md-6">
           <div id="login-box" class="col-md-12">
-            <form class="form" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <form class="form" #registerColForm="ngForm" (ngSubmit)="onSubmit(registerColForm)">
               <p></p>
               <p>
                 <label for="name" class="text-info">Nombres:</label>
@@ -76,7 +76,7 @@
                   La contraseña es obligatoria
                 </span>
               </p>
-              <input type="submit" value="Registro" class="btn btn-outline-primary" [disabled]="!registerForm.form.valid" />
+              <input type="submit" value="Registro" class="btn btn-outline-primary" [disabled]="!registerColForm.form.valid" />
             </form>
           </div>
         </div>

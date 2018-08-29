@@ -25,7 +25,7 @@ export class RegisterCollaboratorComponent implements OnInit {
     
   }
 
-  onSubmit(registerForm) {
+  onSubmit(registerColForm) {
     this.userService.register(this.user)
       .subscribe(
         response => {
@@ -33,7 +33,7 @@ export class RegisterCollaboratorComponent implements OnInit {
             this.status = 'success';
 
             this.user = new UserCollaborator('', '', '', '', '', '','','','');
-            registerForm.reset();
+            registerColForm.reset();
           } else {
             this.status = 'error';
           }
